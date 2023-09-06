@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       muni: {
         verde: "#95c840",
         celeste: "#4093C8",
+        gris: "#6F7484"
       },
     },
   });

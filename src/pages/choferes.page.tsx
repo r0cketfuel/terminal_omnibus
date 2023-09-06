@@ -3,6 +3,8 @@ import axios from 'axios';
 import Header from '@/components/header';
 import TableDef from '../components/Tabla/tablaDefinitiva';
 import config from '../config';
+import { Text } from '@chakra-ui/react';
+import { AxiosLogged } from '@/configs/Axios';
 
 /* Titulo de la página */
 const title = "CHOFERES";
@@ -19,8 +21,9 @@ export default function CallToActionWithAnnotation() {
 
   async function fetchData() {
     try {
-      const response = await axios.get(config.URL_CHOFERES);
+      const response = await AxiosLogged.get('choferes');
       const responseData = response.data;
+      console.log(responseData);
 
       setData({
         datos: responseData,
@@ -36,7 +39,7 @@ export default function CallToActionWithAnnotation() {
 
   return (
     <Header>
-      <TableDef title={title} captions={columnas} data={data.datos} totalRegistros={data.totalRegistros} />
+      <TableDef title={title} captions={columnas} list={data.datos} totalRegistros={data.totalRegistros} />
     </Header>
   );
 }

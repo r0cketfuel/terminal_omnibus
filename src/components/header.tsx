@@ -1,7 +1,7 @@
 import React, { ReactNode, ReactText, useEffect } from "react";
 
 /* Archivo de configuración del frontend */
-import config   from '../config';
+import config from '../config';
 
 import Head from "next/head";
 import {
@@ -42,6 +42,9 @@ import {
   FiPackage,
   FiPieChart,
   FiMessageCircle,
+  FiStopCircle,
+  FiBriefcase,
+  FiAward,
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { useRouter } from "next/router";
@@ -56,11 +59,11 @@ interface LinkItemProps {
   disabled?: boolean;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Escritorio",   path: "/",            icon: FiPieChart  },
-  { name: "Movimientos",  path: "/movimientos", icon: FiBell      },
-  { name: "Choferes",     path: "/choferes",    icon: FiUser      },
-  { name: "Empresas",     path: "/empresas",    icon: FiBell      },
-  { name: "Servicios",    path: "/servicios",   icon: FiBell      },
+  { name: "Escritorio", path: "/", icon: FiPieChart },
+  { name: "Movimientos", path: "/movimientos", icon: FiStopCircle },
+  { name: "Choferes", path: "/choferes", icon: FiUser },
+  { name: "Empresas", path: "/empresas", icon: FiBriefcase },
+  { name: "Servicios", path: "/servicios", icon: FiAward },
 ];
 
 export default function Header({ children }: { children: ReactNode }) {

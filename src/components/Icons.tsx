@@ -52,9 +52,12 @@ export const LogoIcon = createIcon({
         c0,3.04-1.02,5.57-3.07,7.6c-2.05,2.03-5.11,3.04-9.2,3.04H6.21c-1.09,0-2.03-0.36-2.82-1.09C2.6,44.04,2.21,43.07,2.21,41.84z"
       />
       <path fill="#95C047" d="M153.08,4.28c0,15.2,0,30.4,0,45.6" />
-      <text transform="matrix(1 0 0 1 167.9597 24.5411)">
+      <text transform="matrix(1 0 0 1 167.9597 24.5411)" fontSize="20">
         <tspan x="0" y="0">
-          {config.APP_TITLE}
+          TERMINAL DE
+        </tspan>
+        <tspan x="0" y="20">
+          OMNIBUS
         </tspan>
       </text>
     </g>
