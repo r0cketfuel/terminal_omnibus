@@ -1,4 +1,4 @@
-const BASE_URL = "http://128.0.204.43:8000/api/";
+const BASE_URL = "http://128.0.204.43:8000/";
 
 const config = {
   APP_TITLE: "TERMINAL DE OMNIBUS",

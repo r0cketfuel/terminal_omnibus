@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Header from '@/components/header';
 import TableDef from '../components/Tabla/tablaDefinitiva';
 import config from '../config';
 import { Text } from '@chakra-ui/react';
-import { AxiosLogged } from '@/configs/Axios';
+import Header from '@component/components/header';
+import { AxiosLogged } from '@component/configs/Axios';
 
 /* Titulo de la página */
 const title = "CHOFERES";

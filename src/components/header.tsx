@@ -51,6 +51,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { link } from "fs";
 import { LogoIcon } from "./Icons";
+import { useAuthStore } from "@component/component/stores/auth";
 
 interface LinkItemProps {
   name: string;
@@ -181,6 +182,7 @@ interface MobileProps extends FlexProps {
   onOpen: () => void;
 }
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+  const { logout, username } = useAuthStore();
 
   return (
     <Flex
@@ -234,7 +236,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               bg={useColorModeValue("white", "gray.900")}
               borderColor={useColorModeValue("gray.200", "gray.700")}
             >
-              <MenuItem>Cerrar sesion</MenuItem>
+              <MenuItem onClick={logout}>Cerrar sesion</MenuItem>
             </MenuList>
           </Menu>
         </Flex>

@@ -192,7 +192,7 @@ const CardTableSimple = ({
                             </Flex></Th>
                             <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("nombre")}>
                                 <Flex align="center">
-                                    <span>Plataforma</span>
+                                    <span>Apellido</span>
                                     <Stack ml={2} direction="column" spacing={0}>
                                         <Icon
                                             as={FiChevronUp}
@@ -208,7 +208,7 @@ const CardTableSimple = ({
                                 </Flex>
                             </Th>
                             <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("horarioDestino")}><Flex align="center">
-                                <span>Horario Destino</span>
+                                <span>Nombre</span>
                                 <Stack ml={2} direction="column" spacing={0}>
                                     <Icon
                                         as={FiChevronUp}
@@ -224,7 +224,7 @@ const CardTableSimple = ({
                             </Flex></Th>
                             <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("horarioServicio")}>
                                 <Flex align="center">
-                                    <span>Horario Servicio</span>
+                                    <span>DNI</span>
                                     <Stack ml={2} direction="column" spacing={0}>
                                         <Icon
                                             as={FiChevronUp}
@@ -242,7 +242,7 @@ const CardTableSimple = ({
 
 
                             <Th color="white" fontSize="sm" onClick={() => handleColumnSort("destino")} align="center"><Flex align="center" justify={"center"}>
-                                <span>Destino</span>
+                                <span>Email</span>
                                 <Stack ml={2} direction="column" spacing={0}>
                                     <Icon
                                         as={FiChevronUp}
@@ -257,7 +257,7 @@ const CardTableSimple = ({
                                 </Stack>
                             </Flex></Th>
                             <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("origen")}><Flex align="center">
-                                <span>Origen</span>
+                                <span>Telefono</span>
                                 <Stack ml={2} direction="column" spacing={0}>
                                     <Icon
                                         as={FiChevronUp}
@@ -272,7 +272,7 @@ const CardTableSimple = ({
                                 </Stack>
                             </Flex></Th>
                             <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("coche")}><Flex align="center">
-                                <span>Coche</span>
+                                <span>Activo</span>
                                 <Stack ml={2} direction="column" spacing={0}>
                                     <Icon
                                         as={FiChevronUp}
@@ -286,51 +286,9 @@ const CardTableSimple = ({
                                     />
                                 </Stack>
                             </Flex></Th>
-                            <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("pasajeros")}><Flex align="center">
-                                <span>Pasajeros</span>
-                                <Stack ml={2} direction="column" spacing={0}>
-                                    <Icon
-                                        as={FiChevronUp}
-                                        fontSize={17}
-                                        color={sortColumn === "pasajeros" && sortDirection === "asc" ? 'white' : 'gray.600'}
-                                    />
-                                    <Icon
-                                        as={FiChevronDown}
-                                        fontSize={17}
-                                        color={sortColumn === "pasajeros" && sortDirection === "desc" ? 'white' : 'gray.600'}
-                                    />
-                                </Stack>
-                            </Flex></Th>
-                            <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("empresa")}><Flex align="center">
-                                <span>Empresa</span>
-                                <Stack ml={2} direction="column" spacing={0}>
-                                    <Icon
-                                        as={FiChevronUp}
-                                        fontSize={17}
-                                        color={sortColumn === "empresa" && sortDirection === "asc" ? 'white' : 'gray.600'}
-                                    />
-                                    <Icon
-                                        as={FiChevronDown}
-                                        fontSize={17}
-                                        color={sortColumn === "empresa" && sortDirection === "desc" ? 'white' : 'gray.600'}
-                                    />
-                                </Stack>
-                            </Flex></Th>
-                            <Th color="white" fontSize={"sm"} onClick={() => handleColumnSort("chofer")}><Flex align="center">
-                                <span>Chofer</span>
-                                <Stack ml={2} direction="column" spacing={0}>
-                                    <Icon
-                                        as={FiChevronUp}
-                                        fontSize={17}
-                                        color={sortColumn === "chofer" && sortDirection === "asc" ? 'white' : 'gray.600'}
-                                    />
-                                    <Icon
-                                        as={FiChevronDown}
-                                        fontSize={17}
-                                        color={sortColumn === "chofer" && sortDirection === "desc" ? 'white' : 'gray.600'}
-                                    />
-                                </Stack>
-                            </Flex></Th>
+
+
+
                         </Tr>
                     </Thead>
 
@@ -339,9 +297,6 @@ const CardTableSimple = ({
                             <Th color="white"><Input type="number" /></Th>
                             <Th color="#6690F4"><Input type="text" value={searchValue}
                                 onChange={(e) => setSearchValue(e.target.value)} /></Th>
-                            <Th color="#6690F4"><Input type="number" /></Th>
-                            <Th color="#6690F4"><Input type="number" /></Th>
-                            <Th color="#6690F4"><Input type="number" /></Th>
                             <Th color="#6690F4"><Input type="number" /></Th>
                             <Th color="#6690F4"><Input type="number" /></Th>
                             <Th color="#6690F4"><Input type="number" /></Th>
@@ -358,15 +313,12 @@ const CardTableSimple = ({
                                         color={"muni.celeste"}>
                                         {item.id}
                                     </Link></Td>
-                                <Td fontWeight={300}>{item.nombre}</Td>
                                 <Td fontWeight={300}>{item.apellido}</Td>
+                                <Td fontWeight={300}>{item.nombre}</Td>
                                 <Td fontWeight={300}>{item.documento_nro}</Td>
                                 <Td fontWeight={300}>{item.email}</Td>
                                 <Td fontWeight={300}>{item.telefono}</Td>
-                                <Td fontWeight={300}>{item.telefono}</Td>
-                                <Td fontWeight={300}>{item.telefono}</Td>
-                                <Td fontWeight={300}>{item.telefono}</Td>
-                                <Td fontWeight={300}>{item.nombre}</Td>
+                                <Td fontWeight={300}>{item.activo ? "ACTIVO" : "DESACTIVADO"}</Td>
                             </Tr>
                         ))}
                     </Tbody>
